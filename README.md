@@ -1,86 +1,87 @@
-# Airbnb Command-Line Interface (AirbnbCLI)
+AirBnB clone - MySQL
+ Amateur
+ By: Guillaume
+ Weight: 2
+ Project to be done in teams of 2 people (your team: Kevine Umutoni, Simeon Azeh Kongnyuy)
+ Your score will be updated once you launch the project review.
+ Project over - took place from May 27, 2024 12:00 AM to Jun 2, 2024 11:59 PM
+Concepts
+For this project, we expect you to look at this concept:
 
-## Description
-This project provides a Python command-line interpreter (AirbnbCLI) for managing Airbnb data, specifically users, places, cities, and other relevant entities. It serves as the foundation for building a more comprehensive Airbnb-like web application.
+AirBnB clone
+Background Context
+Environment variables will be your best friend for this project!
 
-This project is a comprehensive command-line interpreter application designed to streamline tasks and automate processes. Built with Python, it offers a user-friendly interface and a suite of powerful commands to enhance productivity.
+HBNB_ENV: running environment. It can be “dev” or “test” for the moment (“production” soon!)
+HBNB_MYSQL_USER: the username of your MySQL
+HBNB_MYSQL_PWD: the password of your MySQL
+HBNB_MYSQL_HOST: the hostname of your MySQL
+HBNB_MYSQL_DB: the database name of your MySQL
+HBNB_TYPE_STORAGE: the type of storage used. It can be “file” (using FileStorage) or db (using DBStorage)
+Resources
+Read or watch:
 
-## Command Interpreter
-AirbnbCLI allows you to create, retrieve, update, and delete Airbnb objects using text-based commands. This makes it a powerful tool for developers and users who prefer a code-driven approach to data management.
+cmd module
+packages concept page
+unittest module
+args/kwargs
+SQLAlchemy tutorial
+How To Create a New User and Grant Permissions in MySQL
+Python3 and environment variables
+SQLAlchemy
+MySQL 8.0 SQL Statement Syntax
+AirBnB clone - ORM
+Learning Objectives
+At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-### Getting started
-1. **Installation**:
-
-  - Clone this repository using Git:
-
-    Bash
-    git clone [https://github.com/your-username/airbnb_cli.git](https://github.com/simplykevine/alu-AirBnB_clone.git)
-
-  - Install the package in development mode to make changes immediately reflected:
-
-    Bash
-    cd airbnb_cli
-    pip install -e .
-
-2. **Running the Interpreter**:
-
-  - To start the command interpreter, navigate to the project directory and run:
-
-    From the project directory, execute:
-
-    Bash
-    python cli.py
-
-	This will start the AirbnbCLI and display its welcome message and prompt.
-
-  - **Using the Command Interpreter**:
-
-    -- Once the interpreter starts, you can use the following commands:
-
-	--- help: Displays all available commands and their descriptions.
-	--- run <command>: Executes the specified command.
-	--- quit: Exits the command interpreter.
-
-    -- Examples
-	--- To get help:
-	(cmd) help
-
-	--- To execute a command:
-	(cmd) run echo "Hello, World!"
-
-	--- To exit the interpreter:
-	(cmd) quit
-
-    -- **Other commands**:
-	-- create_user <username> <email>: Creates a new user.
-	-- get_user <user_id>: Retrieves a user by ID.
-	-- list_users: Lists all users.
-	-- update_user <user_id> <attribute> <new_value>: Updates a specific user attribute.
-	-- delete_user <user_id>: Deletes a user.
-
-	(Similar commands exist for other object types like places and cities)
-
-	-- help: Provides a list of available commands.
-	-- exit: Exits the command interpreter.
-
-    -- Example Usage:
-
-	*** (airbnb) create_user john_doe john.doe@example.com
-	*** (airbnb) get_user 1
-	*** (airbnb) update_user 1 email jane.doe@example.com
-	*** (airbnb) list_users
-	*** (airbnb) help
-	*** (airbnb) exit
-
-  - Additional Notes
-
-For more complex operations or additional functionalities, consider extending the command set by defining new methods in the AirbnbCLI class.
-Explore implementing additional object types and functionalities related to Airbnb data management.
-
-## Authors
-
-Refer to the [AUTHORS](https://github.com/simplykevine/alu-AirBnB_clone/blob/master/AUTHORS) file at the root of the repository for a list of contributors.
-
-## License
-
-This project is licensed under the African Leadership University.
+General
+What is Unit testing and how to implement it in a large project
+What is *args and how to use it
+What is **kwargs and how to use it
+How to handle named arguments in a function
+How to create a MySQL database
+How to create a MySQL user and grant it privileges
+What ORM means
+How to map a Python Class to a MySQL table
+How to handle 2 different storage engines with the same codebase
+How to use environment variables
+Requirements
+Python Scripts
+Allowed editors: vi, vim, emacs
+All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
+All your files should end with a new line
+The first line of all your files should be exactly #!/usr/bin/python3
+A README.md file, at the root of the folder of the project, is mandatory
+Your code should use the pycodestyle (version 2.7.*)
+All your files must be executable
+The length of your files will be tested using wc
+All your modules should have documentation (python3 -c 'print(__import__("my_module").__doc__)')
+All your classes should have documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
+All your functions (inside and outside a class) should have documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
+A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+Python Unit Tests
+Allowed editors: vi, vim, emacs
+All your files should end with a new line
+All your test files should be inside a folder tests
+You have to use the unittest module
+All your test files should be python files (extension: .py)
+All your test files and folders should start by test_
+Your file organization in the tests folder should be the same as your project: ex: for models/base_model.py, unit tests must be in: tests/test_models/test_base_model.py
+All your tests should be executed by using this command: python3 -m unittest discover tests
+You can also test file by file by using this command: python3 -m unittest tests/test_models/test_base_model.py
+All your modules should have documentation (python3 -c 'print(__import__("my_module").__doc__)')
+All your classes should have documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
+All your functions (inside and outside a class) should have documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
+We strongly encourage you to work together on test cases, so that you don’t miss any edge cases
+SQL Scripts
+Allowed editors: vi, vim, emacs
+All your files will be executed on Ubuntu 20.04 LTS using MySQL 8.0
+Your files will be executed with SQLAlchemy version 1.4.x
+All your files should end with a new line
+All your SQL queries should have a comment just before (i.e. syntax above)
+All your files should start by a comment describing the task
+All SQL keywords should be in uppercase (SELECT, WHERE…)
+A README.md file, at the root of the folder of the project, is mandatory
+The length of your files will be tested using wc
+GitHub
+There should be one project repository per group. If you clone/fork/whatever a partner’s project repository with the same name before the second deadline, you risk a 0% score.
